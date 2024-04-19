@@ -89,6 +89,26 @@
             </dependencies>
         </profile>
         <profile>
+            <id>monetdb</id>
+            <activation>
+                <property>
+                    <name>env.BENCHBASE_PROFILE</name>
+                    <value>monetdb</value>
+                </property>
+            </activation>
+            <properties>
+                <classifier>monetdb</classifier>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>monetdb</groupId>
+                    <artifactId>monetdb-jdbc</artifactId>
+                    <version>3.3</version>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
             <id>mysql</id>
             <activation>
                 <property>
@@ -525,6 +545,7 @@
                                 <ignoredUnusedDeclaredDependency>org.apache.phoenix:phoenix-client-hbase-2.4:jar</ignoredUnusedDeclaredDependency>
                                 <ignoredUnusedDeclaredDependency>com.microsoft.sqlserver:mssql-jdbc:jar</ignoredUnusedDeclaredDependency>
                                 <ignoredUnusedDeclaredDependency>org.xerial:sqlite-jdbc:jar</ignoredUnusedDeclaredDependency>
+                                <ignoredUnusedDeclaredDependency>monetdb:monetdb:jar</ignoredUnusedDeclaredDependency>
                             </ignoredUnusedDeclaredDependencies>
                         </configuration>
                     </execution>
@@ -540,4 +561,10 @@
             </plugin>
         </plugins>
     </build>
+  <repositories>
+    <repository>
+      <id>clojars.org</id>
+      <url>https://repo.clojars.org</url>
+    </repository>
+  </repositories>
 </project>
