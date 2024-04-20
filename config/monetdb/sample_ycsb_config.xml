@@ -2,18 +2,18 @@
 <parameters>
 
     <!-- Connection details -->
-    <type>POSTGRES</type>
-    <driver>org.postgresql.Driver</driver>
-    <url>jdbc:postgresql://localhost:5432/benchbase?sslmode=disable&amp;ApplicationName=ycsb&amp;reWriteBatchedInserts=true</url>
-    <username>admin</username>
-    <password>password</password>
+    <type>monetdb</type>
+    <driver>nl.cwi.monetdb.jdbc.MonetDriver</driver>
+    <url>jdbc:monetdb://localhost:50000/benchbase</url>
+    <username>monetdb</username>
+    <password>monetdb</password>
     <reconnectOnConnectionFailure>true</reconnectOnConnectionFailure>
     <isolation>TRANSACTION_SERIALIZABLE</isolation>
     <batchsize>128</batchsize>
 
     <!-- Scalefactor in YCSB is *1000 the number of rows in the USERTABLE-->
     <scalefactor>1</scalefactor>
-    
+
     <!-- Optional: Override the field size for each column in USERTABLE -->
     <!-- <fieldSize>8</fieldSize> -->
 

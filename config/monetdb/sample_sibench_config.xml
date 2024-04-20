@@ -4,7 +4,7 @@
     <!-- Connection details -->
     <type>monetdb</type>
     <driver>nl.cwi.monetdb.jdbc.MonetDriver</driver>
-    <url>jdbc:monetdb://localhost:50000/sibench</url>
+    <url>jdbc:monetdb://localhost:50000/benchbase</url>
     <username>monetdb</username>
     <password>monetdb</password>
     <reconnectOnConnectionFailure>true</reconnectOnConnectionFailure>
@@ -14,7 +14,7 @@
     <scalefactor>1</scalefactor>
 
     <!-- The workload -->
-    <terminals>1</terminals>
+    <terminals>8</terminals>
     <works>
         <work>
             <time>60</time>

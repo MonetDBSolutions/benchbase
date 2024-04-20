@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <parameters>
 
-    <type>POSTGRES</type>
-    <driver>org.postgresql.Driver</driver>
-    <url>jdbc:postgresql://localhost:5432/benchbase?sslmode=disable&amp;ApplicationName=hyadapt&amp;reWriteBatchedInserts=true</url>
-    <username>admin</username>
-    <password>password</password>
+    <!-- Connection details -->
+    <type>monetdb</type>
+    <driver>nl.cwi.monetdb.jdbc.MonetDriver</driver>
+    <url>jdbc:monetdb://localhost:50000/benchbase</url>
+    <username>monetdb</username>
+    <password>monetdb</password>
     <reconnectOnConnectionFailure>true</reconnectOnConnectionFailure>
     <isolation>TRANSACTION_SERIALIZABLE</isolation>
     <batchsize>128</batchsize>
@@ -115,6 +116,6 @@
         <transactiontype>
             <name>SumRecord10</name>
         </transactiontype>
-        
+
     </transactiontypes>
 </parameters>
